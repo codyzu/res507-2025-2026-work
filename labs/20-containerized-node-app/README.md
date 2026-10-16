@@ -21,6 +21,13 @@ The focus of this lab is **containers, configuration, and runtime behavior**, no
 
 - `docker/`  
   Dockerfile and Docker Compose configuration.
+  
+## Failed step
+- cause : syntax error in the Dockerfile
+- change fixes : remove the syntax error
+
+## Explain at least one failure that could still occur with green CI:
+- any security flaw like a bad pwd or permition of the project
 
 ## Important notes
 
