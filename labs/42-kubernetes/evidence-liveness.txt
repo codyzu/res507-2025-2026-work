@@ -1,0 +1,30 @@
+NAME                         READY   STATUS             RESTARTS       AGE
+quote-app-6b69879984-4pr69   0/1     CrashLoopBackOff   43 (95s ago)   28d
+quote-app-6b69879984-mdjkv   0/1     CrashLoopBackOff   43 (89s ago)   28d
+quote-app-6b69879984-x46ln   0/1     CrashLoopBackOff   43 (79s ago)   28d
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Tue, 17 Nov 2026 08:55:17 +0100
+      Finished:     Tue, 17 Nov 2026 08:55:32 +0100
+    Ready:          False
+Events:
+  Type     Reason          Age                  From     Message
+  ----     ------          ----                 ----     -------
+  Warning  Unhealthy       28d (x55 over 28d)   kubelet  spec.containers{quote-app}: Liveness probe failed: HTTP probe failed with statuscode: 404
+  Warning  BackOff         28d (x72 over 28d)   kubelet  spec.containers{quote-app}: Back-off restarting failed container quote-app in pod quote-app-6b69879984-4pr69_quote-lab(d5e02e7e-bfa2-427e-be67-54a1456690e4)
+  Normal   Pulled          28d (x27 over 28d)   kubelet  spec.containers{quote-app}: Container image "quote-app:local" already present on machine and can be accessed by the pod
+  Normal   SandboxChanged  36m                  kubelet  Pod sandbox changed, it will be killed and re-created.
+  Warning  Unhealthy       35m (x2 over 35m)    kubelet  spec.containers{quote-app}: Liveness probe failed: Get "http://10.42.0.31:3000/does-not-exist": dial tcp 10.42.0.31:3000: connect: connection refused
+  Warning  Unhealthy       35m (x2 over 35m)    kubelet  spec.containers{quote-app}: Readiness probe failed: Get "http://10.42.0.31:3000/health": dial tcp 10.42.0.31:3000: connect: connection refused
+  Warning  Unhealthy       32m (x13 over 35m)   kubelet  spec.containers{quote-app}: Liveness probe failed: HTTP probe failed with statuscode: 404
+  Normal   Started         30m (x6 over 35m)    kubelet  spec.containers{quote-app}: Container started
+  Normal   Killing         29m (x6 over 35m)    kubelet  spec.containers{quote-app}: Container quote-app failed liveness probe, will be restarted
+  Normal   Created         24m (x7 over 35m)    kubelet  spec.containers{quote-app}: Container created
+  Normal   Pulled          2m6s (x15 over 35m)  kubelet  spec.containers{quote-app}: Container image "quote-app:local" already present on machine and can be accessed by the pod
+  Warning  BackOff         2s (x47 over 35m)    kubelet  spec.containers{quote-app}: Back-off restarting failed container quote-app in pod quote-app-6b69879984-4pr69_quote-lab(d5e02e7e-bfa2-427e-be67-54a1456690e4)
+npm notice New major version of npm available! 11.19.1 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-11-17T07_55_18_066Z-debug-0.log

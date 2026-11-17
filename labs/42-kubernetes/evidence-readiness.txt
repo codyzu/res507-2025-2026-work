@@ -1,0 +1,27 @@
+== Pods ==
+NAME                         READY   STATUS    RESTARTS   AGE
+quote-app-574875b8c-jg96n    1/1     Running   0          10m
+quote-app-574875b8c-pz5x8    1/1     Running   0          3m27s
+quote-app-574875b8c-v2k8v    1/1     Running   0          10m
+quote-app-7ffd668dd4-hqzxq   0/1     Running   0          105s
+NAME                   DESIRED   CURRENT   READY   AGE
+quote-app-574875b8c    3         3         3       29d
+quote-app-69fbbcff49   0         0         0       29d
+quote-app-6b69879984   0         0         0       29d
+quote-app-7ffd668dd4   1         1         0       106s
+== Pod en échec : quote-app-7ffd668dd4-hqzxq ==
+Events:
+  Type     Reason     Age                 From               Message
+  ----     ------     ----                ----               -------
+  Normal   Scheduled  107s                default-scheduler  Successfully assigned quote-lab/quote-app-7ffd668dd4-hqzxq to pc-quentin
+  Normal   Pulled     107s                kubelet            spec.containers{quote-app}: Container image "quote-app:local" already present on machine and can be accessed by the pod
+  Normal   Created    107s                kubelet            spec.containers{quote-app}: Container created
+  Normal   Started    107s                kubelet            spec.containers{quote-app}: Container started
+  Warning  Unhealthy  5s (x21 over 102s)  kubelet            spec.containers{quote-app}: Readiness probe failed: HTTP probe failed with statuscode: 404
+== Endpoints ==
+quote-app-574875b8c-v2k8v  ready=true
+quote-app-574875b8c-jg96n  ready=true
+quote-app-574875b8c-pz5x8  ready=true
+quote-app-7ffd668dd4-hqzxq  ready=false
+== Service toujours servi par les anciens pods ==
+{"ok":true}

@@ -1,0 +1,20 @@
+== Déploiement : PVC et pod DB ==
+NAME            STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+quote-db-data   Bound    pvc-1d566447-e4a4-4a1d-a007-b91184f4e06b   1Gi        RWO            local-path     <unset>                 51s
+NAME                        READY   STATUS    RESTARTS   AGE
+quote-db-796c9c9d49-fg466   1/1     Running   0          52s
+
+== Test de persistance ==
+marker=res509-1794906160
+AVANT :
+    <div>res509-1794906160</div>
+Pod DB avant :
+NAME                        READY   STATUS    RESTARTS   AGE
+quote-db-796c9c9d49-fg466   1/1     Running   0          98s
+Pod DB après :
+NAME                        READY   STATUS    RESTARTS   AGE
+quote-db-5f55ff4bb9-9sqjp   1/1     Running   0          9s
+NAME            STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+quote-db-data   Bound    pvc-1d566447-e4a4-4a1d-a007-b91184f4e06b   1Gi        RWO            local-path     <unset>                 110s
+APRÈS :
+    <div>res509-1794906160</div>

@@ -1,0 +1,6 @@
+== Pod quote-app-6f44677bb9-cxbl9 : lastState ==
+1 restart(s), Completed, exitCode=0
+== Extrait des logs --previous ==
+5473:    throw er; // Unhandled 'error' event
+5476:error: terminating connection due to administrator command
+5499:  code: '57P01',

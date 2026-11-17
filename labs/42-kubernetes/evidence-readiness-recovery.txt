@@ -1,0 +1,10 @@
+NAME                   DESIRED   CURRENT   READY   AGE
+quote-app-574875b8c    3         3         3       29d
+quote-app-69fbbcff49   0         0         0       29d
+quote-app-6b69879984   0         0         0       29d
+quote-app-7ffd668dd4   0         0         0       2m53s
+NAME                        READY   STATUS    RESTARTS   AGE
+quote-app-574875b8c-jg96n   1/1     Running   0          11m
+quote-app-574875b8c-pz5x8   1/1     Running   0          4m35s
+quote-app-574875b8c-v2k8v   1/1     Running   0          11m
+{"ok":true}

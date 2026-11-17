@@ -1,0 +1,12 @@
+== Avant suppression ==
+NAME                        READY   STATUS    RESTARTS   AGE
+quote-app-574875b8c-5b7rh   1/1     Running   0          6m51s
+quote-app-574875b8c-jg96n   1/1     Running   0          6m37s
+quote-app-574875b8c-v2k8v   1/1     Running   0          6m43s
+== Suppression de quote-app-574875b8c-5b7rh ==
+pod "quote-app-574875b8c-5b7rh" deleted from quote-lab namespace
+== Après ==
+NAME                        READY   STATUS    RESTARTS   AGE
+quote-app-574875b8c-jg96n   1/1     Running   0          6m46s
+quote-app-574875b8c-pz5x8   1/1     Running   0          8s
+quote-app-574875b8c-v2k8v   1/1     Running   0          6m52s
